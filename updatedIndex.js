@@ -21,12 +21,13 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     let playerOneScore = Number(document.querySelector('#playerOneScore').textContent);
     let playerTwoScore = Number(document.querySelector('#playerTwoScore').textContent);
+    let roundMessage = document.querySelector('#roundMessage');
     let message = "";
     computerSelection = getComputerChoice();
 
     if (playerSelection === computerSelection) {
         message = "It's a tie!";
-        console.log(message);
+        roundMessage.textContent = message;
         return [playerSelection, message];
 
      } else if (playerSelection === "rock" && computerSelection === "paper" || playerSelection === "paper" && computerSelection === "scissors" || playerSelection === "scissors" && computerSelection === "rock"){
@@ -34,6 +35,7 @@ function playRound(playerSelection, computerSelection) {
         console.log(message);
         let score = playerTwoScore += 1;
         document.querySelector('#playerTwoScore').textContent = score;
+        roundMessage.textContent = message;
         return [playerSelection, message];
 
      } else if (playerSelection === "rock" && computerSelection === "scissors" || playerSelection === "paper" && computerSelection === "rock" || playerSelection === "scissors" && computerSelection === "paper"){
@@ -41,6 +43,7 @@ function playRound(playerSelection, computerSelection) {
         console.log(message);
         let score = playerOneScore += 1;
         document.querySelector('#playerOneScore').textContent = score;
+        roundMessage.textContent = message;
         return [playerSelection, message];
 
      } else {
