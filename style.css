@@ -14,6 +14,12 @@ img {
     border-radius: 50px;
 }
 
+h3 {
+    text-align: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
 .button-container button {
     color: aliceblue;
     border-radius: 50px;
@@ -28,7 +34,7 @@ img {
 }
 
 .reset-button {
-    margin-top: 24px;
+    margin-top: 515px;
     border-radius: 50px;
     border: none;
     box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16), -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
@@ -42,9 +48,18 @@ img {
     border-radius: 12px;
     box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16), -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
     display: flex;
+    position: fixed;
     flex-direction: column;
     padding: 16px;
-    width: 350px;
+    margin: 16px;
+    width: 400px;
+}
+
+.score-name-message {
+    margin: 32px;
+    background-color: aliceblue;
+    border-radius: 12px;
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16), -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
 }
 
 .player-names {
