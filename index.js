@@ -28,6 +28,7 @@ function enableButtons() {
 function createResetButton() {
     let resetButton = document.createElement("button");
     resetButton.textContent = "Reset";
+    resetButton.classList.toggle("reset-button");
     document.body.appendChild(resetButton);
     resetButton.onclick = function(){
         let playerOneScore = 0;

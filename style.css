@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    font-family: Roboto, sans-serif;
+    font-family: "Nunito Sans";
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -27,6 +27,16 @@ img {
     height: 73px;
 }
 
+.reset-button {
+    margin-top: 24px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16), -10px -10px 10px -1px rgba(255, 255, 255, 0.70);
+    background-color: aliceblue;
+    width: 70px;
+    height: 35px;
+}
+
 .content {
     background-color: aliceblue;
     border-radius: 12px;
@@ -41,7 +51,7 @@ img {
     display: flex;
     justify-content: center;
     font-size: 24px;
-    gap: 40px;
+    gap: 35px;
 }
 
 .scoreboard {
