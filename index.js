@@ -24,14 +24,6 @@ function enableButtons() {
     buttons.forEach((button) => button.disabled = false);
 };
 
-//Uses Math.random to get a random choice from the choices array to be used as the computer selection
-function getComputerChoice() {
-    const choices = ["rock", "paper", "scissors"];
-    let randomIndex = Math.floor(Math.random() * choices.length);
-    let computerSelection = choices[randomIndex];
-    return computerSelection;
-};
-
 //This function creates the reset button which is populated when a player reaches a score of 5
 function createResetButton() {
     let resetButton = document.createElement("button");
@@ -46,6 +38,14 @@ function createResetButton() {
         document.querySelector('#roundMessage').textContent = "Let's Play!";
         document.body.removeChild(resetButton);
     }
+};
+
+//Uses Math.random to get a random choice from the choices array to be used as the computer selection
+function getComputerChoice() {
+    const choices = ["rock", "paper", "scissors"];
+    let randomIndex = Math.floor(Math.random() * choices.length);
+    let computerSelection = choices[randomIndex];
+    return computerSelection;
 };
 
 //This function is called when a RPS button is selected, the button.id and the return value from getComputerChoice are used to play
@@ -83,8 +83,8 @@ function playRound(playerSelection, computerSelection) {
         message = `You Win! ${playerSelection} beats ${computerSelection}`;
         let score = playerOneScore += 1;
         if (score < 5) {
-        document.querySelector('#playerOneScore').textContent = score;
-        roundMessage.textContent = message;
+            document.querySelector('#playerOneScore').textContent = score;
+            roundMessage.textContent = message;
         } else {
             document.querySelector('#playerOneScore').textContent = score;
             roundMessage.textContent = "You beat a Computer!";
