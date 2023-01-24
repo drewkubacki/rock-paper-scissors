@@ -1,5 +1,7 @@
 body {
     height: 100vh;
+    margin: 0px;
+    padding: 0px;
     font-family: "Nunito Sans";
     overflow: hidden;
     display: flex;
